@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex w-full h-24 bg-primary justify-between items-center">
+    <div className="flex w-full h-24 bg-primary justify-between items-center max-w-[1263px]">
       <div className="mob:flex hidden items-center px-4 ">
         <img src={Rezila} alt="Rezila" />
       </div>
@@ -94,7 +94,7 @@ const Navbar = () => {
         </button>
       </div>
       {isMobileMenuOpen && (
-        <div className=" absolute top-0 left-0 w-full h-[30%] bg-primary  flex-row items-center justify-center mt-[100px]">
+        <div className=" absolute top-0 left-0 w-full h-[20%] bg-primary  flex-row items-center justify-center mt-[100px]">
           <button
             onClick={toggleMobileMenu}
             className="absolute -top-16 right-4 "

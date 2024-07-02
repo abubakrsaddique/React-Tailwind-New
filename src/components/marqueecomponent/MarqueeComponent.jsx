@@ -9,7 +9,7 @@ import Marquee from "react-fast-marquee";
 
 const MarqueeComponent = () => {
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full overflow-hidden max-w-[1263px]">
       <div className="pb-20 w-full relative">
         <div className=" relative left-[10%] top-4 mob:hidden">
           <svg

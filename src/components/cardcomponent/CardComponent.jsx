@@ -3,7 +3,7 @@ import ImageSrc from "../../images/card2.png";
 
 const CardComponent = () => {
   return (
-    <div className="mt-[-60px] mob:mt-[130%]">
+    <div className="mt-[-60px] mob:mt-[105%] overflow-hidden max-w-[1263px]">
       <div className="pb-6">
         <div className="grid grid-cols-4 gap-4 justify-center mob:grid-cols-1">
           <div className="flex jusity-center col-span-2 justify-end mob:justify-center">

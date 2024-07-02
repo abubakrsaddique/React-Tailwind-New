@@ -25,7 +25,7 @@ const About = () => {
     });
   }, []);
   return (
-    <div className="mx-auto w-full ">
+    <div className="mx-auto w-full max-w-[1263px] ">
       <div className="grid grid-cols-4 gap-4 justify-center items-center mob:grid-cols-1">
         <div className="col-span-2 flex justify-center">
           <div className="pt-20 w-[80%]">
@@ -40,6 +40,46 @@ const About = () => {
               dignissim purus. Nulla convallis ipsum molestie nibh malesuada, ac
               malesuada leo volutpat.
             </p>
+            {/* Images Part for small screen*/}
+            <div className="lg:flex col-span-2 items-center justify-start mob:mt-5 hidden">
+              <div className="second">
+                <div className="flex justify-center">
+                  <h1 className="absolute z-[1]">
+                    <SpinningRoundImage
+                      src={RoundImage}
+                      alt=""
+                      className="max-w-[75%] ml-5 mt-3"
+                    />
+                  </h1>
+                </div>
+                <div className="flex pt-20">
+                  <div
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                    data-aos-easing="ease-in-out"
+                    className="mt-10"
+                  >
+                    <img src={Image1} alt="" />
+                  </div>
+                  <div>
+                    <div
+                      data-aos="fade-down"
+                      data-aos-duration="1000"
+                      data-aos-easing="ease-in-out"
+                    >
+                      <img src={Image2} alt="" />
+                    </div>
+                    <div
+                      data-aos="fade-up"
+                      data-aos-duration="1000"
+                      data-aos-easing="ease-in-out"
+                    >
+                      <img src={Image3} alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             {/* First Card */}
             <div className="mb-20 mt-6 w-[80%] mob:w-full">
               <div
@@ -128,8 +168,8 @@ const About = () => {
             </div>
           </div>
         </div>
-        {/* Images Part */}
-        <div className="flex col-span-2 items-center justify-start">
+        {/* Images Part for large screen */}
+        <div className="flex col-span-2 items-center justify-start mob:hidden">
           <div className="second">
             <div className="flex justify-center">
               <h1 className="absolute z-[1]">

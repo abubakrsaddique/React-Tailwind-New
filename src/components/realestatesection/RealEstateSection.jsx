@@ -2,9 +2,11 @@ import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import slider from "../../images/slider.png";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
 
 const RealEstateSection = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState("");
   const swiperRef = useRef(null);
 
   const handleNextButtonClick = () => {
@@ -26,7 +28,7 @@ const RealEstateSection = () => {
     setCurrentSlide(swiperRef.current.swiper.realIndex);
   };
   return (
-    <div className="w-full flex bg-custom-gradient rounded-b-[800px] h-[800px] mob:flex-col mob-h-[860px]">
+    <div className="w-full flex bg-custom-gradient rounded-b-[800px] h-[800px] mob:flex-col mob:h-[860px] max-w-[1263px]">
       <div className="w-[50%] mob:w-full">
         {/* Heading + Para */}
         <div className="flex flex-col items-start space-y-5 mt-12 ml-28 mob:ml-4">
@@ -49,7 +51,10 @@ const RealEstateSection = () => {
               prevEl: ".swiper-button-prev",
               nextEl: ".swiper-button-next",
             }}
-            pagination={{ clickable: true }}
+            pagination={{
+              dynamicBullets: true,
+            }}
+            modules={[Pagination]}
             className="w-full"
             onSlideChange={handleSlideChange}
           >
@@ -65,7 +70,7 @@ const RealEstateSection = () => {
             onClick={handlePrevButtonClick}
           ></div>
           <div
-            className="swiper-button-next mt-36 right-7 bg-primary w-7 h-7 cursor-pointer z-[1000] rounded-[50%] transform -translate-y-1/2 mob:mt-0 mob:m-3 "
+            className="swiper-button-next mt-36 right-7 bg-primary w-7 h-7 cursor-pointer z-[1000] rounded-[50%] transform -translate-y-1/2 mob:mt-0 mob:-m-2 "
             onClick={handleNextButtonClick}
           ></div>
           <div className="swiper-pagination"></div>
@@ -124,12 +129,12 @@ const RealEstateSection = () => {
                 <path
                   d="M2 1.5L342 2.97399"
                   stroke="#3A0CA3"
-                  stroke-width="3"
-                  stroke-linecap="round"
+                  strokeWidth="3"
+                  strokeLinecap="round"
                 ></path>
               </svg>
             </div>
-            <hr className=""></hr>
+            <hr></hr>
 
             <div className="flex justify-center items-center h-[90%]">
               <div className="max-w-[340px] w-full">
@@ -138,7 +143,7 @@ const RealEstateSection = () => {
                   id="name"
                   name="name"
                   required=""
-                  class=" bg-[hsla(0,0%,83%,0.2)] border-none rounded-[20px] h-[59px] w-full my-2 px-6 focus:outline-none "
+                  className=" bg-[hsla(0,0%,83%,0.2)] border-none rounded-[20px] h-[59px] w-full my-2 px-6 focus:outline-none "
                   placeholder="Full Name"
                   value=""
                 />
@@ -146,7 +151,7 @@ const RealEstateSection = () => {
                   id="email"
                   name="email"
                   required=""
-                  class="bg-[hsla(0,0%,83%,0.2)] border-none rounded-[20px] h-[59px] w-full my-2 px-6 focus:outline-none"
+                  className="bg-[hsla(0,0%,83%,0.2)] border-none rounded-[20px] h-[59px] w-full my-2 px-6 focus:outline-none"
                   type="text"
                   placeholder="Email Address"
                   value=""
@@ -155,14 +160,14 @@ const RealEstateSection = () => {
                   id="message"
                   name="message"
                   required=""
-                  class="bg-[hsla(0,0%,83%,0.2)] border-none w-full rounded-[20px] my-2 py-6 px-6"
+                  className="bg-[hsla(0,0%,83%,0.2)] border-none w-full rounded-[20px] my-2 py-6 px-6 focus:outline-none"
                   placeholder="Message"
                   cols="30"
                   rows="5"
                 ></textarea>
                 <button
                   type="btn button"
-                  class="my-4 text-primary bg-secondary rounded-[50px] text-base font-medium w-full h-[60px] hover:bg-[#6d28d9]"
+                  className="my-4 text-primary bg-secondary rounded-[50px] text-base font-medium w-full h-[60px] hover:bg-[#6d28d9]"
                 >
                   Submit
                 </button>

@@ -9,7 +9,7 @@ import "./index.css";
 
 const App = () => {
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <Header />
       <Navbar />
       <RealEstateSection />

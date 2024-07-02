@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="bg-secondary h-7 mob:hidden">
+    <div className="bg-secondary h-7 mob:hidden max-w-[1263px] ">
       <div className="flex w-full">
         <div className="w-[65%] flex text-base font-normal">
           <svg
