@@ -27,7 +27,7 @@ const About = () => {
   return (
     <div className="mx-auto w-full ">
       <div className="grid grid-cols-4 gap-4 justify-center items-center mob:grid-cols-1">
-        <div className="lg:col-span-2 flex justify-center">
+        <div className="col-span-2 flex justify-center">
           <div className="pt-20 w-[80%]">
             <h1 className="text-xl font-medium text-secondary tracking-widest ">
               WHO ARE WE
