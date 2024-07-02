@@ -3,10 +3,10 @@ import ImageSrc from "../../images/card2.png";
 
 const CardComponent = () => {
   return (
-    <div className="mt-[-60px]">
+    <div className="mt-[-60px] mob:mt-[130%]">
       <div className="pb-6">
-        <div className="grid grid-cols-4 gap-4 justify-center">
-          <div className="flex jusity-center col-span-2 justify-end">
+        <div className="grid grid-cols-4 gap-4 justify-center mob:grid-cols-1">
+          <div className="flex jusity-center col-span-2 justify-end mob:justify-center">
             <div
               className="px-6 bg-primary flex items-center rounded-[50px] h-24 shadow-lg "
               data-aos="fade-right"
@@ -19,7 +19,7 @@ const CardComponent = () => {
               </h1>
             </div>
           </div>
-          <div className="col-span-2 flex items-center justify-start">
+          <div className="col-span-2 flex items-center justify-start  mob:justify-center ">
             <div
               className="px-6 flex items-center bg-primary rounded-[50px] h-24 shadow-lg "
               data-aos="fade-left"

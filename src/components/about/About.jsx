@@ -26,8 +26,8 @@ const About = () => {
   }, []);
   return (
     <div className="mx-auto w-full ">
-      <div className="grid grid-cols-4 gap-4 justify-center items-center">
-        <div className="col-span-2 flex justify-center">
+      <div className="grid grid-cols-4 gap-4 justify-center items-center mob:grid-cols-1">
+        <div className="lg:col-span-2 flex justify-center">
           <div className="pt-20 w-[80%]">
             <h1 className="text-xl font-medium text-secondary tracking-widest ">
               WHO ARE WE
@@ -41,7 +41,7 @@ const About = () => {
               malesuada leo volutpat.
             </p>
             {/* First Card */}
-            <div className="mb-20 mt-6 w-[80%]">
+            <div className="mb-20 mt-6 w-[80%] mob:w-full">
               <div
                 className="mb-6 max-w bg-primary rounded-[30px] shadow-lg "
                 data-aos="fade-right"
@@ -141,6 +141,7 @@ const About = () => {
                 data-aos="fade-right"
                 data-aos-duration="1000"
                 data-aos-easing="ease-in-out"
+                className="mt-10"
               >
                 <img src={Image1} alt="" />
               </div>

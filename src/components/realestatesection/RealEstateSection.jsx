@@ -26,14 +26,14 @@ const RealEstateSection = () => {
     setCurrentSlide(swiperRef.current.swiper.realIndex);
   };
   return (
-    <div className="w-full flex bg-custom-gradient rounded-b-[800px] h-[800px]">
-      <div className="w-[50%]">
+    <div className="w-full flex bg-custom-gradient rounded-b-[800px] h-[800px] mob:flex-col mob-h-[860px]">
+      <div className="w-[50%] mob:w-full">
         {/* Heading + Para */}
-        <div className="flex flex-col items-start space-y-5 mt-12 ml-28">
+        <div className="flex flex-col items-start space-y-5 mt-12 ml-28 mob:ml-4">
           <h1 className="text-secondary text-xl font-medium tracking-widest ">
             REAL ESTATE
           </h1>
-          <h2 className="text-6xl font-semibold leading-tight">
+          <h2 className="text-6xl font-semibold leading-tight mob:font-medium">
             Find a perfect home you love..!
           </h2>
           <p className="text-base font-normal text-gray">
@@ -42,7 +42,7 @@ const RealEstateSection = () => {
           </p>
         </div>
         {/* Slider */}
-        <div className="w-[90%] relative ml-20">
+        <div className="w-[90%] relative ml-20  mob:ml-8">
           <Swiper
             ref={swiperRef}
             navigation={{
@@ -61,15 +61,15 @@ const RealEstateSection = () => {
             </SwiperSlide>
           </Swiper>
           <div
-            className="swiper-button-prev mt-36 left-[12px] bg-primary w-7 h-7 cursor-pointer z-[1000] rounded-[50%] transform -translate-y-1/2 "
+            className="swiper-button-prev mt-36 left-[12px] bg-primary w-7 h-7 cursor-pointer z-[1000] rounded-[50%] transform -translate-y-1/2 mob:mt-0 mob:-m-3 "
             onClick={handlePrevButtonClick}
           ></div>
           <div
-            className="swiper-button-next mt-36 right-7 bg-primary w-7 h-7 cursor-pointer z-[1000] rounded-[50%] transform -translate-y-1/2 "
+            className="swiper-button-next mt-36 right-7 bg-primary w-7 h-7 cursor-pointer z-[1000] rounded-[50%] transform -translate-y-1/2 mob:mt-0 mob:m-3 "
             onClick={handleNextButtonClick}
           ></div>
           <div className="swiper-pagination"></div>
-          <div className="relative top-0 left-[134%] transform -translate-x-1/2 -mt-96">
+          <div className="relative top-0 left-[134%] transform -translate-x-1/2 -mt-96 mob:hidden ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="61"
@@ -107,9 +107,9 @@ const RealEstateSection = () => {
         </div>
       </div>
       {/* Form */}
-      <div className="w-[50%] flex justify-center items-center col-span-2">
+      <div className="w-[50%] flex justify-center items-center col-span-2 mob:w-full mob:mt-24">
         <div className="justify-center">
-          <form className="flex flex-col bg-primary rounded-[30px] shadow-[10px_30px_50px_rgba(0,0,0,0.05)] h-[582px]  w-[420px] -mt-20">
+          <form className="flex flex-col bg-primary rounded-[30px] shadow-[10px_30px_50px_rgba(0,0,0,0.05)] h-[582px]  w-[420px] -mt-20 mob:w-[392px]">
             <h1 className="text-base text-secondary font-medium text-center py-6">
               Contact Us Now
             </h1>
@@ -130,9 +130,9 @@ const RealEstateSection = () => {
               </svg>
             </div>
             <hr className=""></hr>
-            {/* Form Input */}
+
             <div className="flex justify-center items-center h-[90%]">
-              <div className="max-w-[340px]">
+              <div className="max-w-[340px] w-full">
                 <input
                   type="text"
                   id="name"
